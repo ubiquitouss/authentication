@@ -18,7 +18,9 @@
     {% endif %}
 
 {{ form.as_ul }}
-<input type="submit" value="Edit Profile"class="btn btn-secondary">
-
 </form>
+</br>
+</br>
+<p><small><a href="{% url 'change_password' %}">Click here </a> to change your password"</small></p>
+<input type="submit" value="Edit Profile"class="btn btn-secondary">
 {% endblock content %}
