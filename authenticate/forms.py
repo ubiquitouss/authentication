@@ -2,6 +2,12 @@ from django.contrib.auth.forms import UserCreationForm,UserChangeForm
 from django import forms
 from django.contrib.auth.models import User
 
+class EditProfileForm(UserChangeForm):
+
+    class Meta:
+        model = User
+        fields =('username','first_name', 'last_name','email','password')
+
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(help_text="", label="", widget=forms.TextInput(attrs={'class': 'form-control','placeholder':'Email Address'}))
