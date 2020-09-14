@@ -1,8 +1,8 @@
 {% extends 'authenticate/base.html' %}
 {% block content %}
-<div class="col-md-6 offset-md-3">
-<h1 class="text-center">Register</h1>
-<form method="POST" action="{% url 'register' %}">
+
+<h1 class="text-center">Edit Profile</h1>
+<form method="POST" action="{% url 'edit_profile' %}">
     {% csrf_token %}
     {% if form.errors %}
     <div class="alert alert-warning alert-dismissable" role="alert">
@@ -18,8 +18,7 @@
     {% endif %}
 
 {{ form.as_ul }}
-<input type="submit" value="Register"class="btn btn-secondary">
+<input type="submit" value="Edit Profile"class="btn btn-secondary">
 
 </form>
-</div>
 {% endblock content %}
